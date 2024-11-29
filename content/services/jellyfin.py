@@ -132,6 +132,7 @@ class library():
 
         def __new__(cls, element):
             try:
+                time.sleep(10)
                 ui_print('[jellyfin] refreshing all libraries')
                 url = library.url + '/Library/Refresh'
                 response = post(url,"")
