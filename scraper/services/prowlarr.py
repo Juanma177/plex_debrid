@@ -3,7 +3,7 @@ from base import *
 from ui.ui_print import *
 import releases
 
-base_url = "http://127.0.0.1:9696"
+base_url = "http://localhost:9696"
 api_key = ""
 name = "prowlarr"
 session = requests.Session()
@@ -24,7 +24,7 @@ def scrape(query, altquery):
             ui_print('[prowlarr] error: prowlarr request timed out. Reduce the number of prowlarr indexers or make sure they are healthy.')
             return []
         except :
-            ui_print('[prowlarr] error: prowlarr couldnt be reached. Make sure your prowlarr base url is correctly formatted (default: http://prowlarr:9696).')
+            ui_print('[prowlarr] error: prowlarr couldnt be reached. Make sure your prowlarr base url is correctly formatted (default: http://localhost:9696).')
             return []
         if response.status_code == 200:
             try:

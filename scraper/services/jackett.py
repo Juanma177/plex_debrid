@@ -3,7 +3,7 @@ from base import *
 from ui.ui_print import *
 import releases
 
-base_url = "http://127.0.0.1:9117"
+base_url = "http://localhost:9117"
 api_key = ""
 name = "jackett"
 resolver_timeout = '1'
@@ -66,7 +66,7 @@ def scrape(query, altquery):
             ui_print('[jackett] error: jackett request timed out. Reduce the number of jackett indexers, make sure your indexers are healthy and enable the jackett setting "CORS".')
             return []
         except :
-            ui_print('[jackett] error: jackett couldn\'t be reached. Make sure your jackett base url is correctly formatted (default: http://jackett:9117).')
+            ui_print('[jackett] error: jackett couldn\'t be reached. Make sure your jackett base url is correctly formatted (default: http://localhost:9117).')
             return []
         if not response.status_code == 200:
             if response.status_code in [401,403]:
