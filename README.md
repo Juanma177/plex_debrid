@@ -8,6 +8,12 @@ This is an [ElfHosted](https://elfhosted.com) maintenance-and-features fork of t
 
 Here's a [detailed guide / walkthrough](https://elfhosted.com/guides/media/stream-from-real-debrid-with-plex/)
 
+## Can I use it without ElfHosted?
+
+Yes, of course :) You can use it just like the original, but you're "on your own", support-wise!
+
+One variation to note is that you'll need to set the ENV vars `CLIENT_ID` and `CLIENT_SECRET` to your own Trakt auth credentials. The ones in the original itstoggle repo expired and have not been refreshed. If you don't care to use Trackt, just set them to something non-null so that the script won't error out.
+
 ## Improvements
 
 * ✅ Support [ElfHosted internal URLs](https://elfhosted.com/how-to/connect-apps/) for [Plex](https://elfhosted.com/app/plex/), [Jellyfin](https://elfhosted.com/app/jellyfin/), [Overseerr](https://elfhosted.com/app/overseerr/), [Jackett](https://elfhosted.com/app/jackett/), [Prowlarr](https://elfhosted.com/app/prowlarr/) by default.
