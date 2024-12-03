@@ -8,16 +8,10 @@ This is an [ElfHosted](https://elfhosted.com) maintenance-and-features fork of t
 
 Here's a [detailed guide / walkthrough](https://elfhosted.com/guides/media/stream-from-real-debrid-with-plex/)
 
-## Can I use it without ElfHosted?
-
-Yes, of course :) You can use it just like the original, but you're "on your own", support-wise!
-
-One variation to note is that you'll need to set the ENV vars `CLIENT_ID` and `CLIENT_SECRET` to your own Trakt auth credentials. The ones in the original itstoggle repo expired and have not been refreshed. If you don't care to use Trackt, just set them to something non-null so that the script won't error out.
-
 ## Improvements
 
 * ✅ Support [ElfHosted internal URLs](https://elfhosted.com/how-to/connect-apps/) for [Plex](https://elfhosted.com/app/plex/), [Jellyfin](https://elfhosted.com/app/jellyfin/), [Overseerr](https://elfhosted.com/app/overseerr/), [Jackett](https://elfhosted.com/app/jackett/), [Prowlarr](https://elfhosted.com/app/prowlarr/) by default.
-* ✅ Trakt OAuth [fixed](https://github.com/elfhosted/plex_debrid/commit/c678fa1e5974a5c666b2fe70d65228c6fdfb4047) (*by passing your own client ID / secret in ENV vars*).
+* ✅ Trakt OAuth [fixed](https://github.com/elfhosted/plex_debrid/commit/c678fa1e5974a5c666b2fe70d65228c6fdfb4047)
 * ✅ Integrated with [Zilean](https://github.com/iPromKnight/zilean/) for scraping [DebridMediaManager](https://debridmediamanager.com/) (DMM) public hashes, defaults to ElfHosted internal Zilean service.
 * ✅ Parametize watchlist loop interval (*defaults to 30s instead of hard-coded 30 min*)
 * ✅ Single episode downloads [fixed](https://github.com/elfhosted/plex_debrid/pull/1)
