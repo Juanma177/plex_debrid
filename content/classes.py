@@ -632,8 +632,6 @@ class media:
     def isanime(self):
         if 'anime' in self.genre():
             if self.type == "show":
-                if hasattr(self, "anime_count"):
-                    return True
                 self.anime_count = 0
                 if hasattr(self, 'Seasons'):
                     for season in self.Seasons:
