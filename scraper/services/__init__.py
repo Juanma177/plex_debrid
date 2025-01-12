@@ -13,6 +13,7 @@ from scraper.services import mediafusion
 from scraper.services import comet
 from scraper.services import eztv
 from scraper.services import thepiratebay
+from scraper.services import torrentgalaxy
 
 #define subclass method
 def __subclasses__():
